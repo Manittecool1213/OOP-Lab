@@ -119,13 +119,13 @@ class FigureManager {
     }
 
     if (!areaTypeMap.containsKey(20.0)) {
-      System.out.println("Key not present");
+      System.out.println("Figure with area 20.0: Key not present.");
     } else {
       System.out.println("Figure with area 20.0: " + areaTypeMap.get(20.0).name);
     }
 
     if (!areaTypeMap.containsKey(30.0)) {
-      System.out.println("Key not present");
+      System.out.println("Figure with area 30.0: Key not present.");
     } else {
       System.out.println("Figure with area 30.0: " + areaTypeMap.get(30.0).name);
     }
