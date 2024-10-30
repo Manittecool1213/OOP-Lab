@@ -29,7 +29,7 @@ class FigureManager {
 
     System.out.println("Figure counts:");
     System.out.println("Triangles: " + figureMap.get("Triangle"));
-    System.out.println("Rectanlges: " + figureMap.get("Rectangle"));
+    System.out.println("Rectangles: " + figureMap.get("Rectangle"));
     System.out.println("Rhombuses: " + figureMap.get("Rhombus"));
   }
 
@@ -61,7 +61,7 @@ class FigureManager {
 
     System.out.println("Largest areas:");
     System.out.println("Triangle: " + areaMap.get("Triangle"));
-    System.out.println("Rectanlge: " + areaMap.get("Rectangle"));
+    System.out.println("Rectangle: " + areaMap.get("Rectangle"));
     System.out.println("Rhombus: " + areaMap.get("Rhombus"));
 
   }
@@ -87,7 +87,7 @@ class FigureManager {
       area20Count = areaFrequencyMap.get(20.0);
     }
     if (areaFrequencyMap.containsKey(30.0)) {
-      area20Count = areaFrequencyMap.get(30.0);
+      area30Count = areaFrequencyMap.get(30.0);
     }
 
     System.out.println("Figures with area 20.0: " + area20Count);
@@ -139,7 +139,7 @@ class FigureManager {
 
     Map<String, Double> totalAreaMap = new HashMap<>();
     totalAreaMap.put("Triangle", 0.0);
-    totalAreaMap.put("Rectanle", 0.0);
+    totalAreaMap.put("Rectangle", 0.0);
     totalAreaMap.put("Rhombus", 0.0);
 
     for (Figure figure : this.figures) {
@@ -153,19 +153,20 @@ class FigureManager {
       }
     }
 
+    System.out.println("Average areas:");
+
     if (triCount != 0) {
       avTriArea = totalAreaMap.get("Triangle") / triCount;
+      System.out.println("Triangle: " + avTriArea);
     }
     if (rectCount != 0) {
       avRectArea = totalAreaMap.get("Rectangle") / rectCount;
+      System.out.println("Rectangle: " + avRectArea);
     }
     if (rhomCount != 0) {
       avRhomArea = totalAreaMap.get("Rhombus") / rhomCount;
+      System.out.println("Rhombus: " + avRhomArea);
     }
 
-    System.out.println("Average areas:");
-    System.out.println("Triangle: " + avTriArea);
-    System.out.println("Rectangle: " + avRectArea);
-    System.out.println("Rhombus: " + avRhomArea);
   }
 }
